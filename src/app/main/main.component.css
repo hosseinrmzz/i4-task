@@ -1,0 +1,71 @@
+.page {
+    margin: 0px 10%;
+}
+
+.group-top-btn {
+    display: flex;
+    justify-content:flex-end;
+}
+
+span {
+    background-color: rgb(0, 123, 255);
+    color: aliceblue;
+    height: 25px;
+    margin: 10px 0px 10px 20px;
+    padding: 4px 15px;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.tabsAndTable {
+    border: 2px solid #c3d1eb;
+    border-top-left-radius: 1px;
+    border-top-right-radius: 1px;
+    border-bottom-left-radius: 5px ;
+    border-bottom-right-radius: 5px;
+}
+
+table {
+    width: 100%;
+}
+
+::ng-deep .mat-tab-labels {
+    width: 100%;
+}
+
+mat-icon {
+    margin-left: 10px;
+}
+
+section {
+    display: flex;
+    justify-content:flex-end;
+    margin-top: 30px;
+    margin-right: 10px;
+}
+
+.details-btn {
+    max-width: 40px;
+}
+
+::ng-deep .mat-ripple {
+  border-bottom: 2px solid rgb(0, 123, 255);
+  width: 100%;
+}
+
+::ng-deep .mat-tab-label-active {
+    background-color: rgb(243, 242, 242);
+    border-top: 2px solid rgb(0, 123, 255);
+}
+
+::ng-deep .mat-tab-group.mat-primary .mat-ink-bar{
+    background-color: rgb(201, 201, 201);
+}
+
+::ng-deep .mat-tab-labels {
+    display: flex;
+    justify-content: space-between;
+}

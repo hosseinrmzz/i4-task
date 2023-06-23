@@ -1,0 +1,68 @@
+<div class="page">
+    
+    <div class="group-top-btn">
+        <span>Edit</span>
+        <span>Ticket</span>
+        <span>Delete</span>
+    </div>
+    <div>
+        
+    </div>
+    <div class="tabsAndTable">
+        <mat-tab-group (selectedTabChange)="tabChanged($event)">
+            <mat-tab label="aithentication">
+                <ng-template mat-tab-label>
+                    aithentication
+                    <mat-icon class="arrow-icon" *ngIf="activeTab === 'aithentication'">expand_more</mat-icon>
+                  </ng-template>    
+              Tab 1 content
+            </mat-tab>
+
+            <mat-tab label='roles'>
+                <ng-template mat-tab-label>
+                    Roles
+                    <mat-icon class="arrow-icon" *ngIf="activeTab === 'roles'">expand_more</mat-icon>
+                </ng-template>    
+                <table mat-table [dataSource]="users?.data" class="mat-elevation-z8">
+                    <ng-container matColumnDef="number">
+                        <th mat-header-cell *matHeaderCellDef> No. </th>
+                        <td mat-cell *matCellDef="let users"> {{ users.number }} </td>
+                      </ng-container>
+
+                      <ng-container matColumnDef="email">
+                        <th mat-header-cell *matHeaderCellDef> Email </th>
+                        <td mat-cell *matCellDef="let users"> {{ users.email }} </td>
+                      </ng-container>
+
+                      <ng-container matColumnDef="company">
+                        <th mat-header-cell *matHeaderCellDef> CAMPANY </th>
+                        <td mat-cell *matCellDef="let users"> {{ users.company }} </td>
+                      </ng-container>
+
+                      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>                    
+                </table>
+            </mat-tab>
+
+            <mat-tab label="logs"> 
+                <ng-template mat-tab-label>
+                    Logs
+                    <mat-icon class="arrow-icon" *ngIf="activeTab === 'logs'">expand_more</mat-icon>
+                </ng-template>    
+                Content 3
+            </mat-tab>
+
+            <mat-tab label="resources">
+                <ng-template mat-tab-label>
+                    Resources
+                    <mat-icon class="arrow-icon" *ngIf="activeTab === 'resources'">expand_more</mat-icon>
+                </ng-template>        
+                Content 4
+            </mat-tab>
+        </mat-tab-group>    
+        <section>
+            <span class="details-btn">Details</span>
+        </section>
+    </div>
+
+</div>
