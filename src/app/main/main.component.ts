@@ -8,19 +8,28 @@ import { MatTabChangeEvent } from '@angular/material/tabs';
   styleUrls: ['./main.component.css'],
 })
 export class MainComponent implements OnInit {
-  users:any;
-  displayedColumns: string[] = ['number', 'email', 'company'];
-  activeTab = 'aithentication';
+  users:any;  
 
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
     this.dataService.request().subscribe(result => {
-      this.users = result
+      this.users = result;
     })
   }
 
-  tabChanged(event: MatTabChangeEvent) {
-    this.activeTab = event.tab.textLabel.toLowerCase();
+  generateTable(item: any) {
+    const keys = Object.keys(item[1]);
+    const dataSource = [item[1]];
+  
+    for (let i = 2; i < item.length; i++) {
+      dataSource.push(item[i]);
+    }
+  
+    return {
+      keys,
+      dataSource
+    };
   }
+
 }
