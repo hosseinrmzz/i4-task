@@ -10,7 +10,7 @@ export class DataService {
 
   constructor(private http: HttpClient) {}
 
-  api: string = 'https://gist.githubusercontent.com/hosseinrmzz/016f86c65a3ac14d6520984829641078/raw/9ab1d46352883f261f1507a8ad4cca43b00d086b/test.json'
+  api: string = 'https://gist.githubusercontent.com/hosseinrmzz/efc2853bf4aa386266a4cce7fce572dd/raw/906e9b47e80f2c1746c161b2631e86bda5afb814/data.json'
   data!: any[]
 
   request(): Observable<any> {
